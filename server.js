@@ -47,6 +47,9 @@ import user from './routes/userRoute.js';
 app.use("/api/v1", post);
 app.use("/api/v1", user);
 
+app.get("/",(req, res) => {
+    res.send("hello world");
+})
 
 app.listen(myConfig.server.port, () => {
     console.log(`Server is running on http://127.0.0.1:${myConfig.server.port}`);
